@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrinkUp.Migrations
 {
     [DbContext(typeof(DrinkUpContext))]
-    [Migration("20210208052021_AddTables")]
-    partial class AddTables
+    [Migration("20210208061218_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,6 +41,8 @@ namespace DrinkUp.Migrations
                     b.Property<bool>("Organic");
 
                     b.Property<string>("Source");
+
+                    b.Property<string>("TeaBrand");
 
                     b.Property<string>("TeaName");
 

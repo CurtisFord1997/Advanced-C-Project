@@ -40,6 +40,8 @@ namespace DrinkUp.Migrations
 
                     b.Property<string>("Source");
 
+                    b.Property<string>("TeaBrand");
+
                     b.Property<string>("TeaName");
 
                     b.Property<string>("TeaType");

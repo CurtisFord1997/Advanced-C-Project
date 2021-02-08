@@ -10,13 +10,14 @@ namespace DrinkUp.Models
     {
         [Key]
         public int TeaID { get; set; }
-
         
         public string TeaName { get; set; }
 
-        public String Discription { get; set; }
+        public string Discription { get; set; }
 
         public string TeaType { get; set; }
+
+        public string TeaBrand { get; set; }
 
         public bool Organic { get; set; }
 
