@@ -1,0 +1,86 @@
+﻿@model IEnumerable<DrinkUp.Models.Tea>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeaBrand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeaType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Organic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Caffene)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrewType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrewTempC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrewTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Source)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeaType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caffene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrewType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrewTempC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrewTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TeaID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TeaID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TeaID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

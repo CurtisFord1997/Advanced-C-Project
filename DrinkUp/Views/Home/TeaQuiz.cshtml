@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DrinkUp.Models.TeaTags>
+
+@{
+    ViewData["Title"] = "Tea";
+}
+<h2>Tea</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tag)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" >@Html.DisplayFor(modelItem => item.Tag)
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
