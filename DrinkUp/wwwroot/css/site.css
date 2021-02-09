@@ -11,7 +11,39 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+    border: none;
+}
 
+navbar {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+navbar.li a {
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
