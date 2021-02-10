@@ -59,20 +59,20 @@ namespace DrinkUp.Models
                             BrewTempC = 90,
                             BrewTime = 0,
                             Source = "Farms in Shizouka, Japan and India"
-                        }/*,
+                        },
                         new Tea
                         {
-                            TeaName = "",
-                            Discription = "",
-                            TeaType = "",
-                            TeaBrand = "",
-                            Organic = ,
-                            Caffene = '',
-                            BrewType = "",
-                            BrewTempC = ,
-                            BrewTime = ,
+                            TeaName = "Green Tea Blueberry Slim Life Tea",
+                            Discription = "Formulated to help provide energy for an active lifestyle while dieting, Yogi Green Tea Blueberry Slim Life tea combines Green Tea and Garcinia Cambogia Fruit Extract with Panax Ginseng Root and Eleuthero Root to support stamina. Sweet Blueberry flavor and bright Hibiscus make Yogi Green Tea Blueberry Slim Life tea a delicious addition to a weight loss program of exercise and a balanced diet.",
+                            TeaType = "Green",
+                            TeaBrand = "Yogi",
+                            Organic = false,
+                            Caffene = 'H',
+                            BrewType = "Bagged",
+                            BrewTempC = 100,
+                            BrewTime = 3,
                             Source = ""
-                        },
+                        }/*,
                         new Tea
                         {
                             TeaName = "",
@@ -102,6 +102,7 @@ namespace DrinkUp.Models
                 if (!context.TeaIngredient.Any())
                 {
                     context.TeaIngredient.AddRange(
+                        //0
                         new TeaIngredient
                         {
                             IngredientName = "Organic Black Tea"
@@ -122,6 +123,7 @@ namespace DrinkUp.Models
                         {
                             IngredientName = "Organic Chamomile"
                         },
+                        //5
                         new TeaIngredient
                         {
                             IngredientName = "Orgnic Lavender"
@@ -141,7 +143,56 @@ namespace DrinkUp.Models
                         new TeaIngredient
                         {
                             IngredientName = "Mint Extracts"
+                        },
+                        //10
+                        new TeaIngredient
+                        {
+                            IngredientName = "Hibiscus Flower"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Monk Fruit Extract"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Asian Ginseng Root (Panax ginseng)"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Chebulic Myrobalan Fruit (Haritaki)"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Bilberry Leaf"
+                        },
+                        //15
+                        new TeaIngredient
+                        {
+                            IngredientName = "Bilberry Leaf"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Eleuthero Root"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Stevia Leaf"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Amla Fruit"
+                        },
+                        new TeaIngredient
+                        {
+                            IngredientName = "Belleric Myrobalan Fruit (Bibhitaki)"
                         }
+                        /* 
+                        ,
+                        new TeaIngredient
+                        {
+                            IngredientName = ""
+                        }
+                        */
                     );
                     context.SaveChanges();
                 }
@@ -155,6 +206,7 @@ namespace DrinkUp.Models
                     }
 
                     context.TeaIngredientLink.AddRange(
+                        //Brooklyn Tea
                         new TeaIngredientLink
                         {
                             TeaId = teaIDList[0],
@@ -175,6 +227,7 @@ namespace DrinkUp.Models
                             TeaId = teaIDList[0],
                             TeaIngredientID = teaIngredientIDList[3]
                         },
+                        //6:00 PM Tea
                         new TeaIngredientLink
                         {
                             TeaId = teaIDList[1],
@@ -195,6 +248,7 @@ namespace DrinkUp.Models
                             TeaId = teaIDList[1],
                             TeaIngredientID = teaIngredientIDList[7]
                         },
+                        //Mint Matcha Superfood Green Tea PowderMint Matcha Superfood Green Tea Powder
                         new TeaIngredientLink
                         {
                             TeaId = teaIDList[2],
@@ -204,6 +258,72 @@ namespace DrinkUp.Models
                         {
                             TeaId = teaIDList[2],
                             TeaIngredientID = teaIngredientIDList[9]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[3]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[10]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[11]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[12]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[13]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[14]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[15]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[16]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[17]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[18]
+                        },
+                        //Blueberry Slim Life Tea
+                        new TeaIngredientLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaIngredientID = teaIngredientIDList[19]
                         }
                     );
                     context.SaveChanges();
@@ -212,6 +332,7 @@ namespace DrinkUp.Models
                 if (!context.TeaStore.Any())
                 {
                     context.TeaStore.AddRange(
+                        //0
                         new TeaStore
                         {
                             Name = "Art Of Tea",
@@ -231,6 +352,22 @@ namespace DrinkUp.Models
                         {
                             Name = "Amazon",
                             Url = ""
+                        },
+                        new TeaStore
+                        {
+                            Name = "Amazon",
+                            Url = "https://www.amazon.com/stores/node/3050987011"
+                        },
+                        //5
+                        new TeaStore
+                        {
+                            Name = "Walmart",
+                            Url = "https://www.walmart.com/browse/food/yogi-tea/976759_976782_1001320_9454938?cat_id=976759_976782_1001320_9454938&facet=retailer%3AWalmart.com"
+                        },
+                        new TeaStore
+                        {
+                            Name = "Vitacost",
+                            Url = "https://www.vitacost.com/yogi-1"
                         }
                     );
                     context.SaveChanges();
@@ -264,6 +401,21 @@ namespace DrinkUp.Models
                         {
                             TeaId = teaIDList[2],
                             TeaStoreId = IDList[3]
+                        },
+                        new TeaStoreLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaStoreId = IDList[4]
+                        },
+                        new TeaStoreLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaStoreId = IDList[5]
+                        },
+                        new TeaStoreLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaStoreId = IDList[6]
                         }
                     );
                     context.SaveChanges();
@@ -272,6 +424,7 @@ namespace DrinkUp.Models
                 if (!context.TeaTags.Any())
                 {
                     context.TeaTags.AddRange(
+                        //0
                         new TeaTags
                         {
                             Tag = "vanilla"
@@ -292,6 +445,7 @@ namespace DrinkUp.Models
                         {
                             Tag = "sweet and spicy"
                         },
+                        //5
                         new TeaTags
                         {
                             Tag = "earthy"
@@ -307,6 +461,15 @@ namespace DrinkUp.Models
                         new TeaTags
                         {
                             Tag = "cooling"
+                        },
+                        new TeaTags
+                        {
+                            Tag = "fruity"
+                        },
+                        //10
+                        new TeaTags
+                        {
+                            Tag = "sweet"
                         }
                     );
                     context.SaveChanges();
@@ -370,6 +533,16 @@ namespace DrinkUp.Models
                         {
                             TeaId = teaIDList[2],
                             TeaTagID = IDList[8]
+                        },
+                        new TeaTagsLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaTagID = IDList[9]
+                        },
+                        new TeaTagsLink
+                        {
+                            TeaId = teaIDList[3],
+                            TeaTagID = IDList[10]
                         }
                     );
                     context.SaveChanges();
