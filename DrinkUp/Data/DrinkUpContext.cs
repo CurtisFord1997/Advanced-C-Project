@@ -46,6 +46,8 @@ namespace DrinkUp.Data
 
         public DbSet<DrinkUp.Models.TeaTagsLink> TeaTagsLink { get; set; }
 
+        public DbSet<DrinkUp.Models.Pop> Pop { get; set; }
+
         //public DbSet<DrinkUp.Models.Tea> Tea { get; set; }
 
         //public DbSet<Tea> Tea { get; set; }
