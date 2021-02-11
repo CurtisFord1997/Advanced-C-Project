@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DrinkUp.Models.HotCoffee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HotCoffeeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HotCoffeeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HotCoffeeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HotCoffeeName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HotCoffeeID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HotCoffeeID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HotCoffeeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
