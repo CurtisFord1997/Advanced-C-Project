@@ -1,0 +1,30 @@
+﻿@model DrinkUp.Models.Frapuccino
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Frapuccino</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FrapType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FrapType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FrapName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FrapName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FrapID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

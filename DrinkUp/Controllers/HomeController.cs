@@ -25,7 +25,17 @@ namespace DrinkUp.Controllers
         }
 
         // GET: TeaTags
-        public async Task<IActionResult> TeaQuiz()
+        public async Task<IActionResult> Tea()
+        {
+            return View(await _context.TeaTags.ToListAsync());
+        }
+
+        public async Task<IActionResult> Pop()
+        {
+            return View(await _context.TeaTags.ToListAsync());
+        }
+
+        public async Task<IActionResult> Coffee()
         {
             return View(await _context.TeaTags.ToListAsync());
         }
