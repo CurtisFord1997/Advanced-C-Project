@@ -3,14 +3,16 @@ using DrinkUp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrinkUp.Migrations
 {
     [DbContext(typeof(DrinkUpContext))]
-    partial class DrinkUpContextModelSnapshot : ModelSnapshot
+    [Migration("20210210143804_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,31 +20,6 @@ namespace DrinkUp.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-<<<<<<< HEAD
-            modelBuilder.Entity("DrinkUp.Models.Pop", b =>
-                {
-                    b.Property<int>("PopId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Diet");
-
-                    b.Property<string>("FruitFlavor");
-
-                    b.Property<int>("NumDrinkPerDay");
-
-                    b.Property<string>("PackageType");
-
-                    b.Property<string>("PopName");
-
-                    b.Property<string>("PreferTemp");
-
-                    b.Property<string>("Sugar");
-
-                    b.HasKey("PopId");
-
-                    b.ToTable("Pop");
-=======
             modelBuilder.Entity("DrinkUp.Models.Coffee", b =>
                 {
                     b.Property<int>("CoffeeID")
@@ -107,7 +84,6 @@ namespace DrinkUp.Migrations
                     b.HasKey("HotCoffeeID");
 
                     b.ToTable("HotCoffee");
->>>>>>> 97f5bf6caa7fc3773b2d4f91be76891707ecb1bf
                 });
 
             modelBuilder.Entity("DrinkUp.Models.Tea", b =>
