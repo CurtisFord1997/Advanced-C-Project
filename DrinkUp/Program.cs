@@ -18,7 +18,7 @@ namespace DrinkUp
     public class Program
     {
         //use this main when Seeding the data (Use this when all the tables that are in your Context exist)
-        //     /*
+             /*
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -48,9 +48,9 @@ namespace DrinkUp
         public static IWebHostBuilder CreateHostBuilder(string[] args) =>
            WebHost.CreateDefaultBuilder(args)
                .UseStartup<Startup>();
-        //   */
+           */
 
-        /*
+        ///*
         //Use this main ONLY when creating the databases, otherwise comment out
         //Also, delete all the tables in your DrinkUpContext Database before you run this. DO NOT DELETE THE DrinkUpContext Database, if you do, recreate the database on your MySQLLOCALDB
         public static void Main(string[] args)
@@ -62,6 +62,6 @@ namespace DrinkUp
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-        */
+        //*/
     }
 }

@@ -1,29 +1,128 @@
-﻿@model IEnumerable<DrinkUp.Models.TeaTags>
+﻿@model DrinkUp.Models.ViewModels.TeaViewModel
 
 @{
     ViewData["Title"] = "Tea";
+    //grouping instructions
+    //https://stackoverflow.com/questions/1160420/how-do-i-group-data-in-an-asp-net-mvc-viewhttps://stackoverflow.com/questions/1160420/how-do-i-group-data-in-an-asp-net-mvc-view
 }
-<h2>Tea</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Tag)
-            </th>
-            <th>
+<h1>Tea</h1>
 
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    <input type="checkbox" >@Html.DisplayFor(modelItem => item.Tag)
+<div class="QuestionBlock" id="CaffeineBlock">
+    <div class="QuestionBlockHeader" id="CaffeineBlockHeader">
+        <h3>Caffene?</h3>
+    </div>
+    <div class="QuestionBlockContent" id="CaffeineBlockContent">
+        <div class="Question" id="CaffeineQuestion">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Do you want a tea with caffeine?
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="radio" name="caffeine" value="Yes">
+                            <label for="Yes">Yes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="caffeine" value="No">
+                            <label for="No">No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="caffeine" value="Either" checked="checked">
+                            <label for="Either">I don't care</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br />
+</div>
 
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<!--Ask whether or not they want it Loose leaf, Powdered, or Tea Bag, or Bottled/Canned-->
+<div class="QuestionBlock" id="BrewTypeBlock">
+    <div class="QuestionBlockHeader" id="BrewTypeBlockHeader">
+        <h2>Brew Style</h2>
+    </div>
+    <div class="QuestionBlockContent" id="BrewTypeBlockHeader">
+        <div class="Question" id="TagQuestion">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Select your preferred brew style
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var group in Model.TeaList.GroupBy(item => item.BrewType))
+                    {
+                        
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="@Html.DisplayFor(modelItem => group.Key)" value="@Html.DisplayFor(modelItem => group.Key)">
+                                    <label for="@Html.DisplayFor(modelItem => group.Key)">@Html.DisplayFor(modelItem => group.Key)</label>
+
+
+                                </td>
+                            </tr>
+                        
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br />
+</div>
+
+<!--Ask whether they want to select by flavorType or by TeaType-->
+<div class="QuestionBlock" id="FlavorVSTeaTypeBlock">
+    <div class="QuestionBlockHeader" id="FlavorVSTeaTypeBlockHeader">
+
+    </div>
+    <div class="QuestionBlockContent" id="FlavorVSTeaTypeBlockBody">
+
+    </div>
+    <br />
+</div>
+
+<div class="QuestionBlock" id="SelectionBlock">
+    <div class="QuestionBlockHeader" id="SelectionBlockHeader">
+
+    </div>
+    <div class="QuestionBlockContent" id="SelectionBlockContent">
+        <div class="Question" id="TagQuestion">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Select the Flavor profiles that interest you.
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.TeaTagsList)
+                    {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tag)
+                                
+
+                                </td>
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br />
+</div>
+
