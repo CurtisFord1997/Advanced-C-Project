@@ -1,0 +1,60 @@
+﻿@model DrinkUp.Models.Pop
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PopName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PopName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FruitFlavor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FruitFlavor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Diet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Diet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PackageType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PackageType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferTemp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreferTemp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sugar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sugar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumDrinkPerDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumDrinkPerDay)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PopId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
