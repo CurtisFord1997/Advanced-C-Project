@@ -11,6 +11,7 @@ namespace DrinkUp.Models
         [Key]
         public int HotCoffeeID { get; set; }
         public String HotCoffeeType { get; set; }
+
         public String HotCoffeeName { get; set; }
     }
 }

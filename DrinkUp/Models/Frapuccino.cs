@@ -11,6 +11,7 @@ namespace DrinkUp.Models
         [Key]
         public int FrapID { get; set; }
         public String FrapType { get; set; }
+
         public String FrapName { get; set; }
     }
 }

@@ -1,8 +1,35 @@
-﻿@{
-    ViewData["Title"] = "Coffee";
+﻿@model IEnumerable<DrinkUp.Models.Coffee>
+
+@{
+    ViewData["Title"] = "All Coffee";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<h2>Coffee</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model)
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <a asp-area="" asp-controller="HotCoffees" asp-action="Index">Hot Coffees</a>
+        <a asp-area="" asp-controller="ColdCoffees" asp-action="Index">Cold Coffees</a>
+        <a asp-area="" asp-controller="Frapuccinoes" asp-action="Index">Frappuccinos</a>
 
-<p>Check the boxes that describe the coffee characteristics you enjoy.</p>
-
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            <h1>@Html.DisplayFor(modelItem => item.CoffeeName)</h1>
+        </td>
+        <td>
+            <h1>@Html.DisplayFor(modelItem => item.Description)</h1>
+        </td>
+    </tr>
+        }
+    </tbody>
+</table>

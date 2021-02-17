@@ -51,9 +51,23 @@ namespace DrinkUp.Controllers
 
         public async Task<IActionResult> Coffee()
         {
-            return View(await _context.TeaTags.ToListAsync());
+            return View(await _context.Coffee.ToListAsync());
         }
 
+        public async Task<IActionResult> HotCoffee()
+        {
+            return View(await _context.HotCoffee.ToListAsync());
+        }
+
+        public async Task<IActionResult> ColdCoffee()
+        {
+            return View(await _context.ColdCoffee.ToListAsync());
+        }
+
+        public async Task<IActionResult> Frap()
+        {
+            return View(await _context.Frapuccino.ToListAsync());
+        }
         public async Task<IActionResult> About()
         {
             ViewData["Message"] = "Your application description page.";
