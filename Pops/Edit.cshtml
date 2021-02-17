@@ -1,0 +1,64 @@
+﻿@model DrinkUp.Models.Pop
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Pop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PopId" />
+            <div class="form-group">
+                <label asp-for="PopName" class="control-label"></label>
+                <input asp-for="PopName" class="form-control" />
+                <span asp-validation-for="PopName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FruitFlavor" class="control-label"></label>
+                <input asp-for="FruitFlavor" class="form-control" />
+                <span asp-validation-for="FruitFlavor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diet" class="control-label"></label>
+                <input asp-for="Diet" class="form-control" />
+                <span asp-validation-for="Diet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PackageType" class="control-label"></label>
+                <input asp-for="PackageType" class="form-control" />
+                <span asp-validation-for="PackageType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreferTemp" class="control-label"></label>
+                <input asp-for="PreferTemp" class="form-control" />
+                <span asp-validation-for="PreferTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sugar" class="control-label"></label>
+                <input asp-for="Sugar" class="form-control" />
+                <span asp-validation-for="Sugar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumDrinkPerDay" class="control-label"></label>
+                <input asp-for="NumDrinkPerDay" class="form-control" />
+                <span asp-validation-for="NumDrinkPerDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
