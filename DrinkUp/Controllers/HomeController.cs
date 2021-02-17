@@ -1,5 +1,6 @@
 ﻿using DrinkUp.Data;
 using DrinkUp.Models;
+using DrinkUp.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,9 +26,22 @@ namespace DrinkUp.Controllers
         }
 
         // GET: TeaTags
-        public async Task<IActionResult> Tea()
+        public async Task<ActionResult> Tea()
         {
-            return View(await _context.TeaTags.ToListAsync());
+            
+            TeaViewModel model = new TeaViewModel
+            {
+                TeaList = _context.Tea.ToList(),
+                TeaIngredientsList = _context.TeaIngredient.ToList(),
+                TeaIngredientsLinkList = _context.TeaIngredientLink.ToList(),
+                TeaStoreList = _context.TeaStore.ToList(),
+                TeaStoreLinkList = _context.TeaStoreLink.ToList(),
+                TeaTagsList = _context.TeaTags.ToList(),
+                TeaTagsLinksList = _context.TeaTagsLink.ToList()
+            };
+            
+
+            return View(model);
         }
 
         public async Task<IActionResult> Pop()
