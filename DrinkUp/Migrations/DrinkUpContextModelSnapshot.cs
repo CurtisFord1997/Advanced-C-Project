@@ -18,7 +18,6 @@ namespace DrinkUp.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-<<<<<<< HEAD
             modelBuilder.Entity("DrinkUp.Models.Pop", b =>
                 {
                     b.Property<int>("PopId")
@@ -42,7 +41,8 @@ namespace DrinkUp.Migrations
                     b.HasKey("PopId");
 
                     b.ToTable("Pop");
-=======
+                });
+
             modelBuilder.Entity("DrinkUp.Models.Coffee", b =>
                 {
                     b.Property<int>("CoffeeID")
@@ -107,7 +107,6 @@ namespace DrinkUp.Migrations
                     b.HasKey("HotCoffeeID");
 
                     b.ToTable("HotCoffee");
->>>>>>> 97f5bf6caa7fc3773b2d4f91be76891707ecb1bf
                 });
 
             modelBuilder.Entity("DrinkUp.Models.Tea", b =>

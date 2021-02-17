@@ -44,9 +44,25 @@ namespace DrinkUp.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<ActionResult> TeaResults()
+        {
+            TeaViewModel model = new TeaViewModel
+            {
+                TeaList = _context.Tea.ToList(),
+                TeaIngredientsList = _context.TeaIngredient.ToList(),
+                TeaIngredientsLinkList = _context.TeaIngredientLink.ToList(),
+                TeaStoreList = _context.TeaStore.ToList(),
+                TeaStoreLinkList = _context.TeaStoreLink.ToList(),
+                TeaTagsList = _context.TeaTags.ToList(),
+                TeaTagsLinksList = _context.TeaTagsLink.ToList()
+            };
+            return View(model);
+        }
+
         public async Task<IActionResult> Pop()
         {
-            return View(await _context.TeaTags.ToListAsync());
+            return View(await _context.Pop.ToListAsync());
         }
 
         public async Task<IActionResult> Coffee()
