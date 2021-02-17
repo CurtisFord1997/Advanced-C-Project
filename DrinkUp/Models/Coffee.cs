@@ -17,6 +17,7 @@ namespace DrinkUp.Models
 
         public string CoffeeType { get; set; }
 
+
         public Boolean Caffiene { get; set; }
 
        
