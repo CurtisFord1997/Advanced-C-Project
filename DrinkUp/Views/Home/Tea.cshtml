@@ -69,8 +69,8 @@
 
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="Brew" value="@Html.DisplayFor(modelItem => group.Key)">
-                                    <label for="Brew">@Html.DisplayFor(modelItem => group.Key)</label>
+                                    <input type="checkbox" name="brew" value="@Html.DisplayFor(modelItem => group.Key)">
+                                    <label for="brew">@Html.DisplayFor(modelItem => group.Key)</label>
 
 
                                 </td>
@@ -104,8 +104,8 @@
                         {
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="@Html.DisplayFor(modelItem => group.Key)" value="@Html.DisplayFor(modelItem => group.Key)">
-                                    <label for="@Html.DisplayFor(modelItem => group.Key)">@Html.DisplayFor(modelItem => group.Key)</label>
+                                    <input type="checkbox" name="teaType" value="@Html.DisplayFor(modelItem => group.Key)">
+                                    <label for="teaType">@Html.DisplayFor(modelItem => group.Key)</label>
                                 </td>
                             </tr>
                         }
@@ -118,7 +118,7 @@
 
     <div class="QuestionBlock" id="SelectionBlock">
         <div class="QuestionBlockHeader" id="SelectionBlockHeader">
-
+            <h2>Flavor Profiles</h2>
         </div>
         <div class="QuestionBlockContent" id="SelectionBlockContent">
             <div class="Question" id="TagQuestion">
@@ -135,8 +135,8 @@
                         {
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="@Html.DisplayFor(modelItem => item.Tag)" value="@Html.DisplayFor(modelItem => item.Tag)">
-                                    <label for="@Html.DisplayFor(modelItem => item.Tag)">@Html.DisplayFor(modelItem => item.Tag)</label>
+                                    <input type="checkbox" name="teaTag" value=@Html.DisplayFor(modelItem => item.TeaTagID)>
+                                    <label for="teaTag">@Html.DisplayFor(modelItem => item.Tag)</label>
 
                                 </td>
                             </tr>

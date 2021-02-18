@@ -140,6 +140,8 @@ namespace DrinkUp.Migrations
                     b.HasKey("TeaID");
 
                     b.ToTable("Tea");
+
+                    b.Property<string>("TeaPic");
                 });
 
             modelBuilder.Entity("DrinkUp.Models.TeaIngredient", b =>

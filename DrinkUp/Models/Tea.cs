@@ -32,5 +32,6 @@ namespace DrinkUp.Models
 
         public string Source { get; set; }
 
+        public string TeaPic { get; set; }
     }
 }

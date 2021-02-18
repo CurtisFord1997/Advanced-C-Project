@@ -2,9 +2,33 @@
 
 @{
     ViewData["Title"] = "Tea Results";
-    //grouping instructions
-    //https://stackoverflow.com/questions/1160420/how-do-i-group-data-in-an-asp-net-mvc-viewhttps://stackoverflow.com/questions/1160420/how-do-i-group-data-in-an-asp-net-mvc-view
 }
-<h1>Tea Results</h1>
- 
 
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                <h1>Tea Results</h1>
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model.TeaList)
+    {
+    <tr id="@Html.DisplayFor(modelItem => item.TeaID)" class="resultRow">
+        <td>
+
+            <img src="@Html.DisplayFor(modelItem => item.TeaPic)" alt="@Html.DisplayFor(modelItem => item.TeaName)" style="max-width: 200px; max-height: 240px;" />
+        </td>
+
+        <td>
+            <h3>@Html.DisplayFor(modelItem => item.TeaName)</h3>
+            <h4>@Html.DisplayFor(modelItem => item.TeaBrand)</h4>
+            @Html.DisplayFor(modelItem => item.Discription)
+
+        </td>
+
+    </tr>
+    }
+</table>
